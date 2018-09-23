@@ -1,0 +1,11 @@
+name: bwa
+channels:
+  - anaconda
+  - bioconda
+  - conda-forge
+  - defaults
+  - ursky
+dependencies:
+  - bwa=0.7.17
+  - metabat2
+  - samtools=1.9

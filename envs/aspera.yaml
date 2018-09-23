@@ -1,0 +1,10 @@
+name: aspera
+channels:
+  - anaconda
+  - bioconda
+  - conda-forge
+  - defaults
+  - ursky
+  - hcc
+dependencies:
+  - aspera-cli

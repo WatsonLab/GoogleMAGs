@@ -1,0 +1,9 @@
+name: assembly-stats
+channels:
+  - anaconda
+  - bioconda
+  - conda-forge
+  - defaults
+  - ursky
+dependencies:
+  - assembly-stats

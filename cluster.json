@@ -1,0 +1,72 @@
+{
+    "__default__" :
+    {
+        "core" : "1",
+        "time" : "01:00:00",
+        "vmem" : "4G",
+        "proj" : "roslin_faang"
+    },
+    "checkm" :
+    {
+        "core" : "8",
+        "time" : "24:00:00",
+        "vmem" : "16G",
+        "proj" : "roslin_faang"
+    },
+    "metabat" :
+    {
+        "core" : "8",
+        "time" : "24:00:00",
+        "vmem" : "16G",
+        "proj" : "roslin_faang"
+    },
+    "download" :
+    {
+        "core" : "1",
+        "time" : "02:00:00",
+        "vmem" : "4G",
+        "proj" : "roslin_faang"
+    },
+    "cutadapt" :
+    {
+        "core" : "1",
+        "time" : "12:00:00",
+        "vmem" : "8G",
+        "proj" : "roslin_faang"
+    },
+    "megahit" :
+    {
+        "core" : "8",
+        "time" : "36:00:00",
+        "vmem" : "16G",
+        "proj" : "roslin_faang"
+    },
+    "bwa_index" :
+    {
+        "core" : "4",
+        "time" : "12:00:00",
+        "vmem" : "4G",
+        "proj" : "roslin_faang"
+    },
+    "mash_sketch" :
+    {
+        "core" : "1",
+        "time" : "12:00:00",
+        "vmem" : "4G",
+        "proj" : "roslin_faang"
+    },
+    "bwa_mem" :
+    {
+        "core" : "8",
+        "time" : "12:00:00",
+        "vmem" : "4G",
+        "proj" : "roslin_faang"
+    },
+    "coassembly" :
+    {
+        "core" : "40",
+        "time" : "240:00:00",
+        "vmem" : "75G",
+        "proj" : "roslin_faang"
+    }
+}
