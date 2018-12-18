@@ -40,7 +40,7 @@ rule megahit:
 		fa=GS.remote(GS_PREFIX + "/megahit/{id}/final.contigs.fa")
 	conda: "envs/megahit.yaml"
 	threads: 8
-	shell: "mkdir -p {params.di} && megahit --continue --k-list 27,57,87 --kmin-1pass -m 45e+09 --min-contig-len 1000 -t {threads} -1 {input.R1} -2 {input.R2} -o {params.di}"
+	shell: "mkdir -p {params.di} && megahit --continue --k-list 27,47,67,87 --kmin-1pass -m 45e+09 --min-contig-len 1000 -t {threads} -1 {input.R1} -2 {input.R2} -o {params.di}"
 
 
 rule bwa_index:
