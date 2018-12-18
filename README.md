@@ -11,11 +11,11 @@ $ snakemake  -p --verbose --keep-remote  -j 400 --kubernetes -s Snakefilev11 --d
 ## Building a custom Docker Image on the 
 You can start from the sample Dockerfile in this repo which just addes procrps which includes the linux tool free required for megahit -m flag when value less than 1
 
-#Auth docker using gcloud
+- Auth docker using gcloud
 $ gcloud auth configure-docker
-#Build the local DOckerfile
+- Build the local DOckerfile
 $ docker build -t [user]/snakemake .
-#Tag the local image
+- Tag the local image
 $ docker tag [user]/snakemake gcr.io/[project_name]/snakemake
-#Push the image to the Google Cloud Container Registery
+- Push the image to the Google Cloud Container Registery
 $ docker push gcr.io/[project]/snakemake
