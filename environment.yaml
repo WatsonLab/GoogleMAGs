@@ -19,3 +19,6 @@ dependencies:
   - cutadapt =1.18
   - aspera-cli =3.7.7
   - kubectl
+  - python-kubernetes
+  - google-api-python-client
+  - google-cloud-storage
