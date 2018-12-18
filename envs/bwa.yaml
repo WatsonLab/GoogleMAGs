@@ -1,8 +1,7 @@
 name: bwa
 channels:
-  - anaconda
-  - bioconda
   - conda-forge
+  - bioconda
   - defaults
   - ursky
 dependencies:
