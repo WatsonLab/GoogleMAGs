@@ -74,7 +74,7 @@ rule bwa_mem:
 		bai=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam.bai"),
 		fla=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam.flagstat")
 	params:
-		idx=GS.remote(GS_PREFIX + "/bwa_indices/{id}.fa")
+		idx=GS.remote(GS_PREFIX + "/bwa_indices/{id2}.fa")
 	conda: "envs/bwa.yaml"
 	threads: 8
 	shell: 
