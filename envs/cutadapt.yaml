@@ -7,3 +7,4 @@ channels:
 dependencies:
   - cutadapt=1.16
   - wget
+  - curl
