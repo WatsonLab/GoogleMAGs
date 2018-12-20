@@ -7,5 +7,6 @@ for addr in $url_list
 do
 	wget  $addr
 done
-cutadapt -a AGATCGGAAGAGC -A AGATCGGAAGAGC -o trimmed/${1}_1.t.fastq.gz -p trimmed/${1}_1.t.fastq.gz -O 5 --minimum-length=50 ${1}_1.fastq.gz ${1}_2.fastq.gz
+set -x
+cutadapt -a AGATCGGAAGAGC -A AGATCGGAAGAGC -o ${2} -p ${3} -O 5 --minimum-length=50 ${1}_1.fastq.gz ${1}_2.fastq.gz
 
