@@ -14,7 +14,7 @@ IDS,  = glob_wildcards("runs/{id}.txt")
 IDS2, = glob_wildcards("runs/{id}.txt")
 
 rule all:
-	input: GS.remote(expand(GS_PREFIX + "/bam/{sample}.{sample2}.bam", sample=IDS, sample2=IDS2))
+	input: GS.remote(expand(GS_PREFIX + "coverage/{sample}.{sample2}.txt", sample=IDS, sample2=IDS2))
 
 #rule download has been integrated into the cutadpat to reduce network transfer
 
