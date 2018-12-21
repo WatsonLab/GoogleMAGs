@@ -14,7 +14,7 @@ IDS,  = glob_wildcards("runs/{id}.txt")
 IDS2, = glob_wildcards("runs/{id}.txt")
 
 rule all:
-	input: GS.remote(expand(GS_PREFIX + "coverage/{sample}.{sample2}.txt", sample=IDS, sample2=IDS2))
+	input: GS.remote(expand(GS_PREFIX + "/coverage/{sample}.{sample2}.txt", sample=IDS, sample2=IDS2))
 
 #rule download has been integrated into the cutadpat to reduce network transfer
 
@@ -92,7 +92,7 @@ rule coverage:
 		bam=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam"),
 		bai=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam.bai")
 	output:
-		cov=GS.remote(GS_PREFIX + "coverage/{id}.{id2}.txt")
+		cov=GS.remote(GS_PREFIX + "/coverage/{id}.{id2}.txt")
 	conda: "envs/metabat2.yaml"
 	shell:
 		'''
