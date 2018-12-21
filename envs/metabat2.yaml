@@ -7,3 +7,4 @@ channels:
   - ursky
 dependencies:
   - metabat2
+  - samtools=1.9
