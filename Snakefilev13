@@ -93,7 +93,7 @@ rule coverage:
 		bai=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam.bai")
 	output:
 		cov=GS.remote(GS_PREFIX + "coverage/{id}.{id2}.txt")
-	conda: "envs/megahit.yaml"
+	conda: "envs/metabat2.yaml"
 	shell:
 		'''
 		jgi_summarize_bam_contig_depths --outputDepth {output.cov} {input.bam}
