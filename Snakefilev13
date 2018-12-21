@@ -4,6 +4,7 @@ from snakemake.remote.GS import RemoteProvider as GSRemoteProvider
 GS = GSRemoteProvider()
 
 GS_INPUT = "hn-snakemake/big"
+GS_INPUT = "mw_test_metagenomics"
 GS_PREFIX = GS_INPUT
 
 shell.executable("/bin/bash")
