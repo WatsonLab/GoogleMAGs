@@ -91,7 +91,7 @@ rule coverage:
 		bam=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam"),
 		bai=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam.bai")
 	output:
-		cov=GS.remote(GS_PREFIX + "coverage/{id}.{id2}.txt"
+		cov=GS.remote(GS_PREFIX + "coverage/{id}.{id2}.txt")
 	conda: "envs/megahit.yaml"
 	shell:
 		'''
