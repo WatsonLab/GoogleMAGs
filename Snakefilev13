@@ -4,7 +4,6 @@ from snakemake.remote.GS import RemoteProvider as GSRemoteProvider
 GS = GSRemoteProvider()
 
 GS_INPUT = "hn-snakemake/big"
-GS_INPUT = "mw_test_metagenomics"
 GS_PREFIX = GS_INPUT
 
 shell.executable("/bin/bash")
@@ -87,3 +86,15 @@ rule bwa_mem:
 		samtools flagstat {output.bam} > {output.fla}
 		'''
 	
+rule coverage:
+	input: 
+		bam=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam"),
+		bai=GS.remote(GS_PREFIX + "/bam/{id}.{id2}.bam.bai")
+	output:
+		cov=GS.remote(GS_PREFIX + "coverage/{id}.{id2}.txt"
+	conda: "envs/megahit.yaml"
+	shell:
+		'''
+		jgi_summarize_bam_contig_depths --outputDepth {output.cov} {input.bam}
+		'''	
+
